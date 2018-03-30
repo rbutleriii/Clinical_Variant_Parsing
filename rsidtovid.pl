@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 ##v0.0.1 Robert R Butler III on 5/4/2017 
+##needs EDirect Command Line Utilities
 ##takes a list of rsids, removes dulicates, fetches variation ids from ClinVar
 ##will drop rs prefix from rsID
 
@@ -9,8 +10,8 @@ use warnings;
 use Data::Dumper qw(Dumper); #for debug
 use List::MoreUtils qw(uniq);
 ##proxy configuration, comment out if unnecessary
-use LWP::UserAgent;
-$ENV{https_proxy} = 'http://proxy.enh.org:8080';
+# use LWP::UserAgent;
+# $ENV{https_proxy} = 'http://your.prxy.here';
 
 my $usage = 'USAGE = perl rsidtovid.pl *.rsidlists.txt'; #gimme the right inputs
 
